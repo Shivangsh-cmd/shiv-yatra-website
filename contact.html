@@ -81,49 +81,74 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section class="contact-form-section">
-        <div class="container">
-            <h2 class="section-title">Send Us a Message</h2>
-            <div class="contact-form-container">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="destination">Preferred Destination</label>
-                        <select id="destination" name="destination">
-                            <option value="">Select a destination</option>
-                            <option value="sikkim">Sikkim</option>
-                            <option value="gangtok">Gangtok</option>
-                            <option value="kalimpong">Kalimpong</option>
-                            <option value="darjeeling">Darjeeling</option>
-                            <option value="dooars">Dooars</option>
-                            <option value="puri">Puri</option>
-                            <option value="digha">Digha</option>
-                            <option value="sundarbans">Sundarbans</option>
-                            <option value="bankura">Bankura, Bishnupur & Purulia</option>
-                            <option value="nabadwip">Nabadwip & Mayapur</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your travel plans, preferences, or any questions you have..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
-            </div>
+   <!-- Contact Form Section -->
+<section class="contact-form-section">
+  <div class="container">
+    <h2 class="section-title">Send Us a Message</h2>
+    <div class="contact-form-container">
+      <form id="contactForm" action="https://formspree.io/f/mldnnlky" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
         </div>
-    </section>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="destination">Preferred Destination</label>
+          <select id="destination" name="destination">
+            <option value="">Select a destination</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Gangtok">Gangtok</option>
+            <option value="Kalimpong">Kalimpong</option>
+            <option value="Darjeeling">Darjeeling</option>
+            <option value="Dooars">Dooars</option>
+            <option value="Puri">Puri</option>
+            <option value="Digha">Digha</option>
+            <option value="Sundarbans">Sundarbans</option>
+            <option value="Bankura">Bankura, Bishnupur & Purulia</option>
+            <option value="Nabadwip">Nabadwip & Mayapur</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about your travel plans, preferences, or any questions you have..."></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        alert('✅ Your message has been sent successfully!');
+        form.reset();
+      } else {
+        alert('❌ Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('⚠️ Network error. Please check your connection.');
+    }
+  });
+</script>
+
 
     <!-- Footer -->
     <footer class="footer">
