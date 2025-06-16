@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinations - Shiv Yatra Homestay</title>
+    <title>Destinations - Shivya Trah Homestay</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/svg+xml" href="/vite.svg">
 </head>
@@ -12,7 +12,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <h2><a href="index.html">Shiv Yatra</a></h2>
+                <h2><a href="index.html">Shivya Trah</a></h2>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -43,46 +43,210 @@
     <section class="destinations-page">
         <div class="container">
             <div class="destinations-grid">
-                <div class="destination-card">
-                    <h3>Sikkim</h3>
-                    <p>Explore Sikkim's majestic mountains, monasteries and vibrant culture.</p>
+                <div class="destination-card" data-category="mountain">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Sikkim Mountains" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Mountain</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Sikkim</h3>
+                        <p>Explore Sikkim's majestic mountains, monasteries and vibrant culture.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🏔️ Mountains</span>
+                            <span class="feature-tag">🏛️ Monasteries</span>
+                            <span class="feature-tag">🎭 Culture</span>
+                        </div>
+                        <button class="explore-btn">Explore Sikkim</button>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <h3>Gangtok</h3>
-                    <p>Discover the charm of Gangtok with scenic views and rich traditions.</p>
+
+                <div class="destination-card" data-category="mountain">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Gangtok City View" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Mountain</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Gangtok</h3>
+                        <p>Discover the charm of Gangtok with scenic views and rich traditions.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🌄 Scenic Views</span>
+                            <span class="feature-tag">🏮 Traditions</span>
+                            <span class="feature-tag">🛍️ Markets</span>
+                        </div>
+                        <button class="explore-btn">Explore Gangtok</button>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <h3>Kalimpong</h3>
-                    <p>Peaceful hills and colonial architecture await you in Kalimpong.</p>
+
+                <div class="destination-card" data-category="mountain">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Kalimpong Hills" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Mountain</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Kalimpong</h3>
+                        <p>Peaceful hills and colonial architecture await you in Kalimpong.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🏔️ Hills</span>
+                            <span class="feature-tag">🏛️ Colonial</span>
+                            <span class="feature-tag">🌸 Gardens</span>
+                        </div>
+                        <button class="explore-btn">Explore Kalimpong</button>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <h3>Darjeeling</h3>
-                    <p>Home of the Himalayan toy train and world-famous tea gardens.</p>
+
+                <div class="destination-card" data-category="mountain">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Darjeeling Tea Gardens" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Mountain</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Darjeeling</h3>
+                        <p>Home of the Himalayan toy train and world-famous tea gardens.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🚂 Toy Train</span>
+                            <span class="feature-tag">🍃 Tea Gardens</span>
+                            <span class="feature-tag">🌅 Sunrise</span>
+                        </div>
+                        <button class="explore-btn">Explore Darjeeling</button>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <h3>Dooars</h3>
-                    <p>Gateway to the forests of North Bengal and wildlife adventures.</p>
+
+                <div class="destination-card" data-category="forest">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Dooars Forest" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Forest</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Dooars</h3>
+                        <p>Gateway to the forests of North Bengal and wildlife adventures.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🌲 Forests</span>
+                            <span class="feature-tag">🐘 Wildlife</span>
+                            <span class="feature-tag">🦌 Safari</span>
+                        </div>
+                        <button class="explore-btn">Explore Dooars</button>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <h3>Puri</h3>
-                    <p>Visit the sacred Jagannath Temple and golden beaches of Puri.</p>
+
+                <div class="destination-card" data-category="beach">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Puri Beach Temple" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Beach</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Puri</h3>
+                        <p>Visit the sacred Jagannath Temple and golden beaches of Puri.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🏛️ Temple</span>
+                            <span class="feature-tag">🏖️ Beach</span>
+                            <span class="feature-tag">🎭 Festival</span>
+                        </div>
+                        <button class="explore-btn">Explore Puri</button>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <h3>Digha</h3>
-                    <p>A perfect coastal retreat with serene sunsets and seafood.</p>
+
+                <div class="destination-card" data-category="beach">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Digha Beach Sunset" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Beach</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Digha</h3>
+                        <p>A perfect coastal retreat with serene sunsets and seafood.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🌅 Sunset</span>
+                            <span class="feature-tag">🦐 Seafood</span>
+                            <span class="feature-tag">🏖️ Beach</span>
+                        </div>
+                        <button class="explore-btn">Explore Digha</button>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <h3>Sundarbans</h3>
-                    <p>Explore the world's largest mangrove forest and Royal Bengal tigers.</p>
+
+                <div class="destination-card" data-category="forest">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Sundarbans Mangrove" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Forest</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Sundarbans</h3>
+                        <p>Explore the world's largest mangrove forest and Royal Bengal tigers.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🐅 Tigers</span>
+                            <span class="feature-tag">🌿 Mangrove</span>
+                            <span class="feature-tag">🚤 Boat Safari</span>
+                        </div>
+                        <button class="explore-btn">Explore Sundarbans</button>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <h3>Bankura, Bishnupur & Purulia</h3>
-                    <p>Experience Bengal's folk heritage and terracotta temples.</p>
+
+                <div class="destination-card" data-category="heritage">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Terracotta Temples" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Heritage</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Bankura, Bishnupur & Purulia</h3>
+                        <p>Experience Bengal's folk heritage and terracotta temples.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🏛️ Temples</span>
+                            <span class="feature-tag">🎭 Folk Art</span>
+                            <span class="feature-tag">🏺 Crafts</span>
+                        </div>
+                        <button class="explore-btn">Explore Heritage</button>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <h3>Nabadwip & Mayapur</h3>
-                    <p>Visit the ISKCON temple, Chaitanya Mahaprabhu's house and more.</p>
+
+                <div class="destination-card" data-category="spiritual">
+                    <div class="destination-image">
+                        <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="ISKCON Temple" />
+                        <div class="destination-overlay">
+                            <span class="destination-category">Spiritual</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Nabadwip & Mayapur</h3>
+                        <p>Visit the ISKCON temple, Chaitanya Mahaprabhu's house and more.</p>
+                        <div class="destination-features">
+                            <span class="feature-tag">🏛️ ISKCON</span>
+                            <span class="feature-tag">🙏 Spiritual</span>
+                            <span class="feature-tag">📿 Pilgrimage</span>
+                        </div>
+                        <button class="explore-btn">Explore Spiritual Sites</button>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Categories Filter -->
+    <section class="destination-filter">
+        <div class="container">
+            <h2 class="section-title">Explore by Category</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Destinations</button>
+                <button class="filter-btn" data-filter="mountain">🏔️ Mountains</button>
+                <button class="filter-btn" data-filter="beach">🏖️ Beaches</button>
+                <button class="filter-btn" data-filter="forest">🌲 Forests</button>
+                <button class="filter-btn" data-filter="heritage">🏛️ Heritage</button>
+                <button class="filter-btn" data-filter="spiritual">🙏 Spiritual</button>
             </div>
         </div>
     </section>
@@ -90,7 +254,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Shiv Yatra Homestay. All rights reserved.</p>
+            <p>&copy; 2024 Shivya Trah Homestay. All rights reserved.</p>
         </div>
     </footer>
 

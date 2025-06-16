@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transitionDelay = `${index * 0.15}s`;
     });
 
-    const destinationCards = document.querySelectorAll('.destination-card');
-    destinationCards.forEach((card, index) => {
+    const destinationCardElements = document.querySelectorAll('.destination-card');
+    destinationCardElements.forEach((card, index) => {
         card.style.transitionDelay = `${index * 0.1}s`;
     });
 
@@ -197,6 +197,42 @@ Message: ${message}
             });
         });
     });
+
+
+     // Enhanced destination filtering (only for destinations page)
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const destinationCards = document.querySelectorAll('.destination-card');
+    
+    if (filterButtons.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter cards with animation
+                destinationCards.forEach((card, index) => {
+                    const category = card.getAttribute('data-category');
+                    
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0) scale(1)';
+                        }, index * 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px) scale(0.95)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
 
     // Add hover effects for interactive elements
     const interactiveElements = document.querySelectorAll('.service-card, .link-card, .destination-card, .review-card, .gallery-item, .additional-card');
