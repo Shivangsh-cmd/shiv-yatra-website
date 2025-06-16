@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navbar) {
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
-            
+
             if (scrolled > 100) {
                 navbar.style.background = 'rgba(240, 245, 249, 0.98)';
                 navbar.style.backdropFilter = 'blur(15px)';
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(contactForm);
             const name = formData.get('name');
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const phone = formData.get('phone');
             const destination = formData.get('destination');
             const message = formData.get('message');
-            
+
             // Create mailto link with form data
             const subject = encodeURIComponent(`Travel Inquiry from ${name}`);
             const body = encodeURIComponent(`
@@ -123,10 +123,10 @@ Phone: ${phone}
 Preferred Destination: ${destination}
 Message: ${message}
             `);
-            
+
             const mailtoLink = `mailto:suman@shivyatrahomestay.in?subject=${subject}&body=${body}`;
             window.location.href = mailtoLink;
-            
+
             // Show success message
             alert('Thank you for your inquiry! Your email client will open with the message ready to send.');
         });
@@ -164,7 +164,6 @@ Message: ${message}
     const galleryImages = document.querySelectorAll('.gallery-item img');
     galleryImages.forEach(img => {
         img.addEventListener('click', function() {
-            // Simple image preview - could be enhanced with a proper lightbox
             const overlay = document.createElement('div');
             overlay.style.cssText = `
                 position: fixed;
@@ -179,7 +178,7 @@ Message: ${message}
                 z-index: 10000;
                 cursor: pointer;
             `;
-            
+
             const enlargedImg = document.createElement('img');
             enlargedImg.src = this.src;
             enlargedImg.style.cssText = `
@@ -188,34 +187,31 @@ Message: ${message}
                 object-fit: contain;
                 border-radius: 0.5rem;
             `;
-            
+
             overlay.appendChild(enlargedImg);
             document.body.appendChild(overlay);
-            
+
             overlay.addEventListener('click', function() {
                 document.body.removeChild(overlay);
             });
         });
     });
 
-
-     // Enhanced destination filtering (only for destinations page)
+    // Enhanced destination filtering (only for destinations page)
     const filterButtons = document.querySelectorAll('.filter-btn');
     const destinationCards = document.querySelectorAll('.destination-card');
-    
+
     if (filterButtons.length > 0) {
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
-                
-                // Update active button
+
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
-                
-                // Filter cards with animation
+
                 destinationCards.forEach((card, index) => {
                     const category = card.getAttribute('data-category');
-                    
+
                     if (filter === 'all' || category === filter) {
                         card.style.display = 'block';
                         setTimeout(() => {
@@ -249,5 +245,13 @@ Message: ${message}
         if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
             link.classList.add('active');
         }
+    });
+
+    // Redirect Explore buttons to contact.html
+    const exploreButtons = document.querySelectorAll('.explore-btn');
+    exploreButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            window.location.href = 'contact.html';
+        });
     });
 });

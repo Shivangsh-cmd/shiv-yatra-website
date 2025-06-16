@@ -1117,3 +1117,27 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+:root {
+  --border-radius: 0.75rem;
+}
+
+/* Ensure destination-category label is visible and consistent */
+.destination-category {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--accent-dark);
+  box-shadow: 0 2px 5px var(--shadow);
+  z-index: 2;
+}
+
+/* Fix missing border-radius reference */
+.destination-card {
+  border-radius: var(--border-radius);
+}
