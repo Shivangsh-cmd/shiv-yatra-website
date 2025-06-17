@@ -114,6 +114,24 @@ body {
   transition: var(--transition);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--accent-dark);
+  text-decoration: none;
+}
+
+.logo-icon {
+  height: 32px;
+  width: 32px;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  object-fit: contain;
+}
+
+
 /* Hero Section */
 .hero {
   height: 100vh;
@@ -1141,3 +1159,5 @@ body {
 .destination-card {
   border-radius: var(--border-radius);
 }
+
+
