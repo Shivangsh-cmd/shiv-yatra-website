@@ -6,17 +6,92 @@
     <title>Shiv Yatra Homestay - Experience Bengal & Beyond</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/svg+xml" href="assets/logo-v3.svg">
+
+    <!--  EXTRA STYLES  (kept here for simplicity)  -->
+    <style>
+        /* FOUNDERS */
+        .founder-card img.profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid #0f766e; /* your accent color */
+        }
+
+        /* CERTIFICATES */
+        .certificates-section {
+            margin: 3rem 0;
+        }
+        .certificates-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .cert-card {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform .3s;
+        }
+        .cert-card:hover {
+            transform: translateY(-4px);
+        }
+        .cert-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+        .cert-card .label {
+            display: block;
+            font-weight: 600;
+            padding: .75rem 1rem;
+            background: #f8fafc;
+            text-align: center;
+            color: #0f766e;
+        }
+        .cert-card .share-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,.55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .cert-card:hover .share-overlay {
+            opacity: 1;
+        }
+        .cert-card .share-overlay img {
+            width: 48px;
+            height: 48px;
+            filter: invert(1);
+        }
+
+        /* Responsive tweaks */
+        @media(max-width:600px){
+            .cert-card{max-width:100%;}
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- Navigation (unchanged) -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-brand">
                 <h2><a href="index.html" class="logo">
-  <img src="assets/logo-v3.svg" alt="Shiv Yatra Logo" class="logo-icon">
-  Shiv Yatra Homestay
-</a></h2>
+                    <img src="assets/logo-v3.svg" alt="Shiv Yatra Logo" class="logo-icon">
+                    Shiv Yatra Homestay
+                </a></h2>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -28,14 +103,12 @@
                 <li><a href="contact.html" class="nav-link">Contact Us</a></li>
             </ul>
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
+    <!-- Page Header (unchanged) -->
     <section class="page-header">
         <div class="container">
             <h1 class="page-title">About Us</h1>
@@ -43,27 +116,55 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT SECTION (extended) -->
     <section class="about-page">
         <div class="container">
             <div class="about-content">
                 <h2 class="section-title">Our Story</h2>
                 <p>Welcome to Shiv Yatra Homestay, where authentic Bengali hospitality meets unforgettable travel experiences. Founded by Suman Chandra and Dipannita Chandra Sarkar, we specialize in creating personalized journeys that showcase the rich cultural heritage and natural beauty of Bengal and the eastern Himalayas. Our passion for travel and deep local knowledge ensures that every guest discovers hidden gems and creates lasting memories with us.</p>
-                
+
+                <!--  FOUNDERS WITH PHOTOS  -->
                 <div class="founders-section">
                     <h3>Meet Our Founders</h3>
                     <div class="founders-grid">
                         <div class="founder-card">
+                            <img src="assets/founders/suman.jpeg" alt="Suman Chandra" class="profile-img">
                             <h4>Suman Chandra</h4>
                             <p>With years of experience in hospitality and deep knowledge of Bengal's cultural heritage, Suman ensures every guest feels at home while discovering the region's hidden treasures.</p>
                         </div>
                         <div class="founder-card">
+                            <img src="assets/founders/dipannita.jpeg" alt="Dipannita Chandra Sarkar" class="profile-img">
                             <h4>Dipannita Chandra Sarkar</h4>
                             <p>Passionate about authentic cuisine and local traditions, Dipannita brings the warmth of Bengali hospitality to every meal and cultural experience we offer.</p>
                         </div>
                     </div>
                 </div>
 
+                <!--  NEW CERTIFICATES SECTION  -->
+                <div class="certificates-section">
+                    <h3>Our Authenticity</h3>
+                    <div class="certificates-grid">
+                        <!-- MSME -->
+                        <div class="cert-card" data-link="https://drive.google.com/file/d/1KFXBZB0rWmzVgjidHye9DoDvqbhcpEUH/view?usp=sharing">
+                            <img src="assets/certs/msme-preview.jpg" alt="MSME Certificate">
+                            <span class="label">MSME Registration Certificate</span>
+                            <div class="share-overlay">
+                                <img src="assets/icons/share.svg" alt="Open in Google Drive">
+                            </div>
+                        </div>
+
+                        <!-- TRADE LICENCE -->
+                        <div class="cert-card" data-link="https://drive.google.com/file/d/1q3lUxkaEadmt2WhnpJi-jxMl2DxL_l7_/view?usp=sharing">
+                            <img src="assets/certs/trade-preview.jpg" alt="Trade Licence">
+                            <span class="label">Trade Licence</span>
+                            <div class="share-overlay">
+                                <img src="assets/icons/share.svg" alt="Open in Google Drive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- rest of your original content -->
                 <div class="mission-section">
                     <h3>Our Mission</h3>
                     <p>To provide authentic, personalized travel experiences that connect our guests with the true essence of Bengal and the Eastern Himalayas, while supporting local communities and preserving cultural traditions.</p>
@@ -98,13 +199,24 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (unchanged) -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Shiv Yatra Homestay. All rights reserved.</p>
         </div>
     </footer>
 
+    <!--  TINY SCRIPT FOR CERTIFICATE CLICK  -->
+    <script>
+        // Redirect to Google Drive on card click
+        document.querySelectorAll('.cert-card').forEach(card=>{
+            card.addEventListener('click', ()=>{
+                window.open(card.dataset.link, '_blank');
+            });
+        });
+
+        // keep your existing script.js
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
