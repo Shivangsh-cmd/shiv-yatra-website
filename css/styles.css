@@ -435,42 +435,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Destinations Section 
-.destinations-page {
-  padding: 5rem 0;
-  background: var(--white);
-}
-
-.destinations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.destination-card {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 12px var(--shadow);
-  transition: var(--transition);
-}
-
-.destination-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px var(--shadow-hover);
-}
-
-.destination-card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--accent-dark);
-  margin-bottom: 1rem;
-}
-
-.destination-card p {
-  line-height: 1.6;
-}
-*/
 
 /* Enhanced Destinations Section - UX Heavy */
 .destinations-page {
@@ -662,9 +626,10 @@ body {
 .filter-btn.active::before {
   left: 0;
 }
+/* =========================================================
+   ABOUT PAGE (Founders + Authenticity)
+   ========================================================= */
 
-/* About Section
--------------------------------------------------- */
 .about-page {
   padding: 5rem 0;
   background: var(--white);
@@ -685,7 +650,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Shared section styling (Founders, Mission, Values, Authenticity) */
+/* Shared section headings */
 .founders-section,
 .certificates-section,
 .mission-section,
@@ -705,7 +670,7 @@ body {
 }
 
 /* Founders
--------------------------------------------------- */
+--------------------------------------------------------- */
 .founders-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -738,7 +703,7 @@ body {
 }
 
 /* Authenticity (Licences)
--------------------------------------------------- */
+--------------------------------------------------------- */
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -749,7 +714,7 @@ body {
 .cert-card {
   position: relative;
   width: 100%;
-  max-width: 320px;          /* keeps cards small */
+  max-width: 320px;
   aspect-ratio: 1 / 1.414;   /* A4 ratio */
   background: #fff;
   border-radius: 0.75rem;
@@ -803,7 +768,6 @@ body {
   height: 40px;
   filter: invert(1);
 }
-
 /* Values
 -------------------------------------------------- */
 .values-grid {
