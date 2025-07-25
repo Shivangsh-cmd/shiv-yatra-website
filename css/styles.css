@@ -436,6 +436,7 @@ body {
 }
 
 
+
 /* Enhanced Destinations Section - UX Heavy */
 .destinations-page {
   padding: 5rem 0;
@@ -626,10 +627,9 @@ body {
 .filter-btn.active::before {
   left: 0;
 }
-/* =========================================================
-   ABOUT PAGE (Founders + Authenticity)
-   ========================================================= */
 
+/* About Section
+-------------------------------------------------- */
 .about-page {
   padding: 5rem 0;
   background: var(--white);
@@ -650,7 +650,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Shared section headings */
+/* Shared section styling (Founders, Mission, Values, Authenticity) */
 .founders-section,
 .certificates-section,
 .mission-section,
@@ -670,7 +670,7 @@ body {
 }
 
 /* Founders
---------------------------------------------------------- */
+-------------------------------------------------- */
 .founders-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -703,26 +703,31 @@ body {
 }
 
 /* Authenticity (Licences)
---------------------------------------------------------- */
+-------------------------------------------------- */
 .certificates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .cert-card {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  aspect-ratio: 1 / 1.414;   /* A4 ratio */
-  background: #fff;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 12px var(--shadow);
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s;
+    width: 100%;
+    aspect-ratio: 1 / 1.414;
+    background: var(--white);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 .cert-card:hover {
   transform: translateY(-4px);
@@ -768,6 +773,7 @@ body {
   height: 40px;
   filter: invert(1);
 }
+
 /* Values
 -------------------------------------------------- */
 .values-grid {
