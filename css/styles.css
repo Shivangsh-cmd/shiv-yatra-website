@@ -701,39 +701,44 @@ body {
   color: var(--accent-dark);
   margin-bottom: 1rem;
 }
-
-/* Authenticity (Licences)
--------------------------------------------------- */
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+.certificates-section {
+  margin-top: 3rem;
+  text-align: center;
 }
 
-@media (min-width: 768px) {
-    .certificates-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.certificates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .cert-card {
-    width: 100%;
-    aspect-ratio: 1 / 1.414;
-    background: var(--white);
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 12px var(--shadow);
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+  width: 320px;
+  max-width: 100%;
+  background: var(--white);
+  border: 2px solid #000;        /* ✅ Black border */
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
 }
-
 
 .cert-card:hover {
   transform: translateY(-4px);
 }
 
-.cert-card img {
+.cert-card .image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1.414; /* A4 aspect ratio */
+  overflow: hidden;
+}
+
+.cert-card .image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -741,16 +746,14 @@ body {
 }
 
 .cert-card .label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
-  padding: 0.75rem 0.5rem;
+  display: block;
   font-weight: 600;
-  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  background: #000;
+  color: #fff;
   text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .cert-card .share-overlay {
@@ -773,6 +776,13 @@ body {
   height: 40px;
   filter: invert(1);
 }
+
+@media (max-width: 600px) {
+  .cert-card {
+    width: 100%;
+  }
+}
+
 
 /* Values
 -------------------------------------------------- */
